@@ -17,6 +17,7 @@ function handleChange(event){
 }
 
 function handleAdd(event){
+  
   props.onAdd(note);
      setnote({
        title: "",

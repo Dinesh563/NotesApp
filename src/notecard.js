@@ -3,6 +3,14 @@ function NoteCard(props){
 
 function handleDEL(){
   props.onDEL(props.id);
+  fetch("http://localhost:5000/delete",{
+    method:"post",
+    headers:{"content-Type":"application/json"
+  },
+  body:JSON.stringify({
+    id:props.id
+  })
+})
 }
 
 
